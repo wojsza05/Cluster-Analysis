@@ -44,7 +44,7 @@ Example call:
 
 ## How to cite
 
-To cite the original paper, see [the original repo](https://github.com/adalmia96/Cluster-Analysis)
+To cite the original paper and this fork, use
 ``` bibtex
 @inproceedings{sia-etal-2020-tired,
     title = "Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!",
@@ -59,5 +59,13 @@ To cite the original paper, see [the original repo](https://github.com/adalmia96
     url = "https://www.aclweb.org/anthology/2020.emnlp-main.135",
     doi = "10.18653/v1/2020.emnlp-main.135",
     pages = "1728--1736",
+}
+@software{Skorski_A_working_implmentation_2023,
+author = {Skorski, Maciej},
+month = {3},
+title = {{A working implmentation of the paper Tired of Topic Models? Clusters of Pretrained Word Embeddings...}},
+url = {https://github.com/maciejskorski/Cluster-Analysis},
+version = {1.0.0},
+year = {2023}
 }
 ```
