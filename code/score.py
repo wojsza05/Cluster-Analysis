@@ -17,13 +17,14 @@ import random
 
 NSEEDS = 5
 
+# python3 code/score.py --clustering_algo KMeans --vocab /usr/share/dict/words --entities word2vec
+
 def main():
     args = parse_args()
 
     stopwords = set(line.strip() for line in open('stopwords_en.txt'))
 
     vocab = create_global_vocab(args.vocab)
-
     train_word_to_file, train_w_to_f_mult, files = create_vocab_and_files(stopwords, args.dataset, args.preprocess, "train", vocab)
     files_num = len(files)
     print("len vocab size:", len(train_word_to_file.keys()))
@@ -34,8 +35,8 @@ def main():
     tf_idf = get_tfidf_score(files, train_word_to_file)
 
     if args.entities == "word2vec":
-        model = gensim.models.KeyedVectors.load_word2vec_format('models/GoogleNews-vectors-negative300.bin', binary=True)
-        intersection, words_index_intersect  = find_intersect(model.vocab,  train_w_to_f_mult, model, files_num, args.entities, args.doc_info)
+        model = gensim.models.KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
+        intersection, words_index_intersect  = find_intersect(model.key_to_index,  train_w_to_f_mult, model, files_num, args.entities, args.doc_info)
     elif args.entities == "fasttext":
 
         # for compatibility, but move everything to embeds later.
@@ -58,7 +59,6 @@ def main():
     #weights , tfdf = get_weights_tfdf(words_index_intersect, train_w_to_f_mult, files_num)
     weights = None
     tfdf = None
-
 
     if args.doc_info == "WGT":
         weights = get_weights_tf(words_index_intersect, train_w_to_f_mult)
