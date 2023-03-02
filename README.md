@@ -5,7 +5,9 @@ This repo fixes reproducibility problems with the implementation of [Tired of To
 
 
 ## How to use the code
-Install requirements by `pip install -r requirements.txt`. To cluster the word embeddings to discover the latent topics, run
+* Install requirements by `pip install -r requirements.txt`. 
+* Download pre-trained models, for example `wget https://figshare.com/ndownloader/files/10798046 -O GoogleNews-vectors-negative300.bin`
+* To cluster the word embeddings to discover the latent topics, run
 ```python code/score.py <arguments>```
 Here are the arguments that can be passed in:
 
