@@ -60,6 +60,7 @@ To cite the original paper and this fork, use
     doi = "10.18653/v1/2020.emnlp-main.135",
     pages = "1728--1736",
 }
+
 @software{Skorski_A_working_implmentation_2023,
 author = {Skorski, Maciej},
 month = {3},
