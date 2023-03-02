@@ -40,7 +40,7 @@ default: 20
 choices=tf, tfidf, tfdf
 
 Example call:
-`python3 code/score.py --entities KG --entities_file {dest_to_entities_file} --clustering_algo GMM --dataset reuters --vocab {dest_to_vocab_file} --num_topics 20 50 --doc_info WGT--rerank tf`
+`python3 code/score.py --clustering_algo KMeans --vocab /usr/share/dict/words --entities word2vec`
 
 ## How to cite
 ``` bibtex
