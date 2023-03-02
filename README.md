@@ -5,8 +5,8 @@ This repo fixes reproducibility problems with the implementation of [Tired of To
 
 
 ## How to use the code
-To cluster the word embeddings to discover the latent topics, run
-```python code/score.py <file> <arguments>```
+Install requirements by `pip install -r requirements.txt`. To cluster the word embeddings to discover the latent topics, run
+```python code/score.py <arguments>```
 Here are the arguments that can be passed in:
 
 ### Required:
