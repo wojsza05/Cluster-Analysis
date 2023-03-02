@@ -43,6 +43,8 @@ Example call:
 `python3 code/score.py --clustering_algo KMeans --vocab /usr/share/dict/words --entities word2vec`
 
 ## How to cite
+
+To cite the original paper, see [the original repo](https://github.com/adalmia96/Cluster-Analysis)
 ``` bibtex
 @inproceedings{sia-etal-2020-tired,
     title = "Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!",
