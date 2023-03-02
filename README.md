@@ -1,13 +1,12 @@
 Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too! (2020; Code for paper)
 ==============================
 
-The repo contains the code needed to reproduce the results in [Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!]( https://aclanthology.org/2020.emnlp-main.135.pdf) by Sia, Dalmia, and Mieke (2020)
-
-Sia, S., Dalmia, A., & Mielke, S. J. (2020). Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too! Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 1728–1736. https://doi.org/10.18653/v1/2020.emnlp-main.135
+This repo fixes reproducibility problems with the implementation of [Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!]( https://aclanthology.org/2020.emnlp-main.135.pdf) by Sia, Dalmia, and Mieke (EMNLP, 2020).
 
 
 ## How to use the code
-To cluster the word embeddings to discover the latent topics, run the code/score.py file.
+To cluster the word embeddings to discover the latent topics, run
+```python code/score.py <file> <arguments>```
 Here are the arguments that can be passed in:
 
 ### Required:
@@ -20,7 +19,7 @@ KG stands for your own set of embeddings
 `--clustering_algo`: The clustering algorithm to use  
 choices= KMeans, SPKMeans, GMM, KMedoids, Agglo, DBSCAN , Spectral, VMFM
 
-`--vocab`: List of vocab files to use for tokenization 
+`--vocab`: List of vocab files to use for tokenization, for example `/usr/share/dict/words`
 
 ### Not Required:
 `--dataset`: Dataset to test clusters against against\
