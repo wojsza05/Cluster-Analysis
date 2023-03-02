@@ -1,7 +1,7 @@
 Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too! (2020; Code for paper)
 ==============================
 
-This repo fixes reproducibility problems with the implementation of [Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!]( https://aclanthology.org/2020.emnlp-main.135.pdf) by Sia, Dalmia, and Mieke (EMNLP, 2020).
+This repo fixes reproducibility problems with the implementation of the paper [Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!]( https://aclanthology.org/2020.emnlp-main.135.pdf) (Sia, Dalmia, and Mieke; EMNLP, 2020).
 
 
 ## How to use the code
