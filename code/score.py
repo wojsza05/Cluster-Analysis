@@ -34,8 +34,8 @@ def main():
     tf_idf = get_tfidf_score(files, train_word_to_file)
 
     if args.entities == "word2vec":
-        model = gensim.models.KeyedVectors.load_word2vec_format('models/GoogleNews-vectors-negative300.bin', binary=True)
-        intersection, words_index_intersect  = find_intersect(model.vocab,  train_w_to_f_mult, model, files_num, args.entities, args.doc_info)
+        model = gensim.models.KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300-SLIM.bin', binary=True)
+        intersection, words_index_intersect  = find_intersect(model.key_to_index,  train_w_to_f_mult, model, files_num, args.entities, args.doc_info)
     elif args.entities == "fasttext":
 
         # for compatibility, but move everything to embeds later.

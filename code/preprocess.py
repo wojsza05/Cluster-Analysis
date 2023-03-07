@@ -79,7 +79,8 @@ def create_files_20news(type):
     if type == "valid":
         type = "test"
     data = fetch_20newsgroups(data_home='./data/', subset=type, remove=('headers', 'footers', 'quotes'))
-    files = data['data'];
+    files = data['data']
+
     return files
 
 def create_files_reuters(type):
@@ -113,7 +114,7 @@ def create_vocab_preprocess(stopwords, data, vocab, preprocess, process_data=Fal
     word_to_file_mult = {}
     strip_punct = str.maketrans("", "", string.punctuation)
     strip_digit = str.maketrans("", "", string.digits)
-
+    data = data[:1000]
     process_files = []
     for file_num in range(0, len(data)):
         words = data[file_num].lower().translate(strip_punct).translate(strip_digit)
