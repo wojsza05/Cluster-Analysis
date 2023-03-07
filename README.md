@@ -1,13 +1,14 @@
 Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too! (2020; Code for paper)
 ==============================
 
-The repo contains the code needed to reproduce the results in [Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!]( https://aclanthology.org/2020.emnlp-main.135.pdf) by Sia, Dalmia, and Mieke (2020)
-
-Sia, S., Dalmia, A., & Mielke, S. J. (2020). Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too! Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 1728–1736. https://doi.org/10.18653/v1/2020.emnlp-main.135
+This repo fixes reproducibility problems with the implementation of the paper [Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!]( https://aclanthology.org/2020.emnlp-main.135.pdf) (Sia, Dalmia, and Mieke; EMNLP, 2020).
 
 
 ## How to use the code
-To cluster the word embeddings to discover the latent topics, run the code/score.py file.
+* Install requirements by `pip install -r requirements.txt`. 
+* Download pre-trained models, for example `wget https://figshare.com/ndownloader/files/10798046 -O GoogleNews-vectors-negative300.bin`
+* To cluster the word embeddings to discover the latent topics, run
+```python code/score.py <arguments>```
 Here are the arguments that can be passed in:
 
 ### Required:
@@ -20,7 +21,7 @@ KG stands for your own set of embeddings
 `--clustering_algo`: The clustering algorithm to use  
 choices= KMeans, SPKMeans, GMM, KMedoids, Agglo, DBSCAN , Spectral, VMFM
 
-`--vocab`: List of vocab files to use for tokenization 
+`--vocab`: List of vocab files to use for tokenization, for example `/usr/share/dict/words`
 
 ### Not Required:
 `--dataset`: Dataset to test clusters against against\
@@ -41,9 +42,11 @@ default: 20
 choices=tf, tfidf, tfdf
 
 Example call:
-`python3 code/score.py --entities KG --entities_file {dest_to_entities_file} --clustering_algo GMM --dataset reuters --vocab {dest_to_vocab_file} --num_topics 20 50 --doc_info WGT--rerank tf`
+`python3 code/score.py --clustering_algo KMeans --vocab /usr/share/dict/words --entities word2vec`
 
 ## How to cite
+
+To cite the original paper and this fork, use
 ``` bibtex
 @inproceedings{sia-etal-2020-tired,
     title = "Tired of Topic Models? Clusters of Pretrained Word Embeddings Make for Fast and Good Topics too!",
@@ -58,5 +61,14 @@ Example call:
     url = "https://www.aclweb.org/anthology/2020.emnlp-main.135",
     doi = "10.18653/v1/2020.emnlp-main.135",
     pages = "1728--1736",
+}
+
+@software{Skorski_A_working_implmentation_2023,
+author = {Skorski, Maciej},
+month = {3},
+title = {{A working implmentation of the paper Tired of Topic Models? Clusters of Pretrained Word Embeddings...}},
+url = {https://github.com/maciejskorski/Cluster-Analysis},
+version = {1.0.0},
+year = {2023}
 }
 ```

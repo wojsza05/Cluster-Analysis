@@ -1,0 +1,10 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Skorski"
+  given-names: "Maciej"
+  orcid: "0000-0003-2997-7539"
+title: "A working implmentation of the paper Tired of Topic Models? Clusters of Pretrained Word Embeddings..."
+version: 1.0.0
+date-released: 2023-03-02
+url: "https://github.com/maciejskorski/Cluster-Analysis"
