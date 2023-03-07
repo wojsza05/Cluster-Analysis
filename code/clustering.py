@@ -9,8 +9,8 @@ import pdb
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 
-from spherecluster import SphericalKMeans
-from spherecluster import VonMisesFisherMixture
+#from spherecluster import SphericalKMeans
+#from spherecluster import VonMisesFisherMixture
 
 from sklearn.metrics.pairwise import rbf_kernel
 
