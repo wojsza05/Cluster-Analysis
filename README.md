@@ -8,8 +8,7 @@ This repo fixes reproducibility problems with the implementation of the paper [T
 * Install requirements by `pip install -r requirements.txt`. 
 * Download pre-trained models, for example `wget https://figshare.com/ndownloader/files/10798046 -O GoogleNews-vectors-negative300.bin`
 * To cluster the word embeddings to discover the latent topics, run
-```python code/score.py <arguments>```
-Here are the arguments that can be passed in:
+```python code/score.py <arguments>```. The description of the arguments is given below:
 
 ### Required:
 `--entities` : The type of pre-trained word embedding you are clustering with\
