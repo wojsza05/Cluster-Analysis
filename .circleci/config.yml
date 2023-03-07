@@ -10,6 +10,3 @@ jobs:
       - checkout # checkout source code
       - python/install-packages:
           pkg-manager: pip
-      - run:
-          name: Download model
-          command: wget https://github.com/eyaler/word2vec-slim/raw/master/GoogleNews-vectors-negative300-SLIM.bin.gz
